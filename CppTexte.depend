@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1615825413 source:c:\users\render\desktop\cpptexte\src\personnage.cpp
+	"Personnage.h"
+
+1615825384 c:\users\render\desktop\cpptexte\include\personnage.h
+	<iostream>
+	<string>
+
+1615825946 source:c:\users\render\desktop\cpptexte\src\objet.cpp
+	"Objet.h"
+
+1615825939 c:\users\render\desktop\cpptexte\include\objet.h
+	<iostream>
+	<string>
+
+1615826848 source:c:\users\render\desktop\cpptexte\main.cpp
+	"Personnage.h"
+	"Heros.h"
+
+1615826859 c:\users\render\desktop\cpptexte\include\heros.h
+	"Personnage.h"
+	"Objet.h"
+	<vector>
+
+1615826622 source:c:\users\render\desktop\cpptexte\src\heros.cpp
+	"Heros.h"
+
