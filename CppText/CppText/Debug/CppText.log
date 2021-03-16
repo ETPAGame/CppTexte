@@ -1,0 +1,4 @@
+﻿  Heros.cpp
+C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(23,20): warning C4018: '<' : incompatibilité signed/unsigned
+C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(32,20): warning C4018: '<' : incompatibilité signed/unsigned
+  CppText.vcxproj -> C:\Users\Utilisateur\source\repos\CppText\Debug\CppText.exe
