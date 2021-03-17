@@ -5,6 +5,8 @@
 #include "Personnage.h"
 #include "Objet.h"
 #include <vector>
+#include <time.h>
+#include <unistd.h>
 
 class Heros : public Personnage
 {
@@ -25,10 +27,12 @@ public:
 
 	void attaque(Personnage& cible);
 
-	void uppercut(Personnage& cible, string zone);
-	void droite(Personnage& cible, string zone);
-	void coupDeBoule(Personnage& cible, string zone);
-	void balayette(Personnage& cible, string zone);
+	void uppercut(Personnage& cible, int zone);
+	void droite(Personnage& cible, int zone);
+	void coupDeBoule(Personnage& cible, int zone);
+	void balayette(Personnage& cible, int zone);
+
+	void inventoryChoice();
 
 };
 #endif // HEROS_H
