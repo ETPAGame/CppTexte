@@ -96,6 +96,7 @@ void Heros::uppercut(Personnage& cible, int zone) {
 		coef = 0.5;
 	}
 	float multiplicateurDegat = QTE(coef);
+	cout <<"mult "  <<  multiplicateurDegat << endl << endl;
 }
 void Heros::droite(Personnage& cible, int zone) {
 	float coef;
@@ -147,9 +148,22 @@ float Heros::QTE(float coef) {
 		}
         time_t timeB = time(NULL);
         int vitesse = difftime(timeB, timeA) ;
+        cout << "vitesse " << vitesse << endl;
+
+
+    if (vitesse > 10){
+        return 0;
+    }
 
 	if (coef == 0.75f) {
 		//qte
+		if (vitesse <= 2){
+            return 1;
+        }
+        else {
+            return 1-(vitesse/10.f);
+
+        }
 		return 1.25f;
 	}
 	else if (coef == 0.5f) {
