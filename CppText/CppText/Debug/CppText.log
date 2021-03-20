@@ -1,7 +1,10 @@
 ﻿  Heros.cpp
 C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(23,20): warning C4018: '<' : incompatibilité signed/unsigned
 C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(32,20): warning C4018: '<' : incompatibilité signed/unsigned
-C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(86,36): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
-C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(148,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(160,14): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
+C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(87,36): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(149,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(161,14): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
+C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(205,20): warning C4018: '<' : incompatibilité signed/unsigned
+C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(223,21): warning C4018: '<' : incompatibilité signed/unsigned
+C:\Users\Utilisateur\source\repos\CppText\CppText\Heros.cpp(232,21): warning C4018: '<' : incompatibilité signed/unsigned
   CppText.vcxproj -> C:\Users\Utilisateur\source\repos\CppText\Debug\CppText.exe

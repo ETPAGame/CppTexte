@@ -78,6 +78,7 @@ void Heros::attaque(Personnage& cible) {
 		break;
 	case 5:
 		Heros::inventoryChoice();
+		return;
 	default:
 		cin >> choixCoup;
 	}
@@ -198,5 +199,41 @@ float Heros::QTE(float coef) {
 }
 
 void Heros::inventoryChoice() {
-
+	int prot = 0;
+	int choix = -1;
+	int tape = 0;
+	for (int i = 0; i < inventaire.size(); i++) {
+		if (inventaire[i].getName() == "Proteine") {
+			prot += 1;
+		}
+		else if (inventaire[i].getName() == "Tape-toi la tete") {
+			tape += 1;
+		}
+	}
+	cout << "Vous avez " << prot << " shakers de proteine et " << tape << " fois la possiblite de vous taper la tete pour vous raisonner." << endl;
+	cout << "Vous avez " << getHealth() << " points de vie et " << vieMental << " point de raisonnement" << endl;
+	cout << " Que voulez vous faire ?" << endl;
+	cout << "1 : prendre un shaker" << endl;
+	cout << "2 : vous tapez la tete" << endl;
+	while ((choix != 1)  && (choix != 2)) {
+		cin >> choix;
+	}
+	if (choix == 1 && prot > 0) {
+		setHealth(getHealth() + 10);
+		for (int i = 0; i < inventaire.size(); i++) {
+			if (inventaire[i].getName() == "Proteine") {
+				inventaire[i].setName("Utilise");
+				break;
+			}
+		}
+	}
+	if (choix == 2 && tape > 0) {
+		setVieMental(getVieMental() + 10);
+		for (int i = 0; i < inventaire.size(); i++) {
+			if (inventaire[i].getName() == "Tape-toi la tete") {
+				inventaire[i].setName("Utilise");
+				break;
+			}
+		}
+	}
 }

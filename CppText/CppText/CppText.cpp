@@ -17,9 +17,13 @@ void gameOver() {
 int main() {
 
 	vector<Objet> inventaire;
-	Heros heros(100, 25, "Barbare", 100, &inventaire);
-	Objet popo("Proteine");
-	Objet prot("Tape-toi la tete");
+	Heros heros(150, 25, "Barbare", 100, &inventaire);
+	Objet prot("Proteine");
+	Objet popo("Tape-toi la tete");
+	heros.addInInventory(&popo);
+	heros.addInInventory(&popo);
+	heros.addInInventory(&prot);
+	heros.addInInventory(&prot);
 	Personnage Ennemis(100, 10, "Moine");
 	char choix = -1;
 
