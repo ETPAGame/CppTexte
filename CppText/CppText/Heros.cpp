@@ -90,7 +90,7 @@ void Heros::attaque(Personnage& cible) {
 
 float Heros::uppercut(Personnage& cible, int zone) {
 	float coef;
-	if (zone != 1 && zone != 2) {
+	while (zone != 1 && zone != 2) {
 		cout << "La zone visee n'est pas bonne" << endl;
 		cin >> zone;
 	}
@@ -106,6 +106,10 @@ float Heros::uppercut(Personnage& cible, int zone) {
 }
 float Heros::droite(Personnage& cible, int zone) {
 	float coef;
+	while (zone != 1 && zone != 2 && zone != 3) {
+		cout << "La zone visee n'est pas bonne" << endl;
+		cin >> zone;
+	}
 	if (zone == 1) {
 		coef = 0.75;
 	}
@@ -120,7 +124,7 @@ float Heros::droite(Personnage& cible, int zone) {
 }
 float Heros::coupDeBoule(Personnage& cible, int zone) {
 	float coef;
-	if (zone != 1 || zone != 2) {
+	while (zone != 1 || zone != 2) {
 		cout << "La zone visee n'est pas bonne" << endl;
 		cin >> zone;
 	}
@@ -135,6 +139,10 @@ float Heros::coupDeBoule(Personnage& cible, int zone) {
 }
 float Heros::balayette(Personnage& cible, int zone) {
 	float coef;
+	while (zone != 1 && zone != 2 && zone != 3) {
+		cout << "La zone visee n'est pas bonne" << endl;
+		cin >> zone;
+	}
 	if (zone == 1) {
 		coef = 0.5;
 	}
@@ -212,7 +220,7 @@ void Heros::inventoryChoice() {
 	}
 	cout << "Vous avez " << prot << " shakers de proteine et " << tape << " fois la possiblite de vous taper la tete pour vous raisonner." << endl;
 	cout << "Vous avez " << getHealth() << " points de vie et " << vieMental << " point de raisonnement" << endl;
-	cout << " Que voulez vous faire ?" << endl;
+	cout << "Que voulez vous faire ?" << endl;
 	cout << "1 : prendre un shaker" << endl;
 	cout << "2 : vous tapez la tete" << endl;
 	while ((choix != 1)  && (choix != 2)) {

@@ -5,8 +5,17 @@
 bool Combat(Heros* moi, Personnage* lui) {
 	cout << "Le combat entre : " << moi->getName() << " et " << lui->getName() << " commence" << endl;
 	cout << "Le barbare commence" << endl;
-	moi->attaque(*lui);
-	return true;
+	while (true) {
+		cout << *lui << endl;
+		moi->attaque(*lui);
+		lui->attackEnemy(*moi);
+		if (moi->getHealth() < 0) {
+			return false;
+		}
+		if (lui->getHealth() < 0) {
+			return true;
+		}
+	}
 }
 
 void gameOver() {
@@ -52,11 +61,27 @@ int main() {
 
 	cout << "Vous arrivez sur la plage et tombez face a une bonne femme qui s apparente a une pauvre nonne, que voulez vous faire ?" << endl << endl;
 	Personnage E1(100, 10, "Nonne");
+	Personnage E2(150, 10, "Moine");
+	Personnage E3(100, 15, "Sage");
 	while (choix != '1') {
 		cout << "1 : La tabasser" << endl;
 		cin >> choix;
 	}
 	if (!Combat(&heros, &E1)) {
+		gameOver();
+	}
+	heros.addInInventory(&popo);
+	heros.addInInventory(&popo);
+	heros.addInInventory(&prot);
+	heros.addInInventory(&prot);
+	if (!Combat(&heros, &E2)) {
+		gameOver();
+	}
+	heros.addInInventory(&popo);
+	heros.addInInventory(&popo);
+	heros.addInInventory(&prot);
+	heros.addInInventory(&prot);
+	if (!Combat(&heros, &E3)) {
 		gameOver();
 	}
 
